@@ -1,0 +1,30 @@
+<div class="newMov container">
+    <form action="/add-movie" method="POST">
+        
+        <div class="form-group">
+            <label for="titletxt">Movie Title</label>
+            <input id="titletxt" type="text" class="form-control" name="title" value="{{ movie.title }}" aria-describedby="titleHelp" placeholder="Enter movie title">
+        </div>
+        <div class="form-group">
+            <label for="yearTxt">Year:</label>
+            <input id="yearTxt" type="text" class="form-control" name="year" value="{{ movie.year }}" aria-describedby="titleHelp" placeholder="Enter movie title">
+        </div>
+        <div class="form-group">
+            <label for="directorTxt">Director:</label>
+            <input id="directorTxt" type="text" class="form-control" name="director" value="{{ movie.director }}" aria-describedby="directorHelp" placeholder="Enter movie director">
+        </div>
+        <div class="form-group">
+            <label for="durationTxt">Duration:</label>
+            <input id="durationTxt" type="text" class="form-control" name="duration" value="{{ movie.duration }}" aria-describedby="durationHelp" placeholder="Enter movie duration">
+        </div>
+        <div class="form-group">
+            <label for="genreTxt">Genre:</label>
+            <input id="genreTxt" type="text" class="form-control" name="genre" value="{{ movie.genre }}" aria-describedby="genreHelp" placeholder="Enter movie genre">
+        </div>
+        <div class="form-group">
+            <label for="rateTxt">Rate:</label>
+            <input id="rateTxt" type="text" class="form-control" name="rate" value="{{ movie.rate }}" aria-describedby="rateHelp" placeholder="Enter movie rate">
+        </div>
+        <button type="submit" class="btn btn-primary">Add</button>
+    </form>
+</div>

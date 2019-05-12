@@ -1,0 +1,45 @@
+
+
+<div class="details container">
+    <form action="/update" method="POST">
+        <input type="hidden" name="id" value="{{movie._id}}">
+        <div class="form-group">
+            <input type="text" class="form-control" name="title" value="{{ movie.title }}" aria-describedby="titleHelp" placeholder="Enter movie title">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" name="year" value="{{ movie.year }}" aria-describedby="titleHelp" placeholder="Enter movie title">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" name="director" value="{{ movie.director }}" aria-describedby="directorHelp" placeholder="Enter movie director">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" name="duration" value="{{ movie.duration }}" aria-describedby="durationHelp" placeholder="Enter movie duration">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" name="genre" value="{{ movie.genre }}" aria-describedby="genreHelp" placeholder="Enter movie genre">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" name="rate" value="{{ movie.rate }}" aria-describedby="rateHelp" placeholder="Enter movie rate">
+        </div>
+        <div class="form-gorup">
+            <label for="celeb-list">Add a Celebrity:</label>
+            <select id="celeb-list" class="form-control" name="allcelebrities" multiple="{{celebrities.length}}" >
+                {{#each celebrities }}
+                    <option value="{{_id}}">{{ name }}</option>
+                {{/each}}
+            </select>
+            
+            <label for="celeb-starring">Celebrities:</label>
+            <select id="celeb-starring" class="form-control" name="celebrities" multiple="{{movie.celebrities.length}}" >
+                {{#each celebritiesStarring }}
+                    <option value="{{_id}}">{{ name }}</option>
+                {{/each}}
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Update</button>
+    </form>
+</div>
+
+
+<script src="/js/movie-details.js"></script>

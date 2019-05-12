@@ -1,0 +1,23 @@
+{
+  "name": "mongoose-movies",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "connect-mongo": "^2.0.3",
+    "cookie-parser": "^1.4.4",
+    "express": "^4.16.4",
+    "express-session": "^1.16.1",
+    "hbs": "^4.0.4",
+    "mongoose": "^5.5.5",
+    "session": "^0.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

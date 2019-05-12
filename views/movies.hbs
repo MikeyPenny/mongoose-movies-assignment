@@ -1,0 +1,20 @@
+
+<div class="content container">
+    <div class="row">
+        {{#each movies}}
+        
+            <div class="card col-12 col-lg-4" style="width: 18rem;">
+                <div class="card-header">
+                    <a href="/movie/{{_id}}">{{ title }}</a>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Year: {{ year }}</li>
+                    <li class="list-group-item">Director: {{ director }}</li>
+                    <li class="list-group-item"><a href="/delete?id={{_id}}"><button class="btn btn-primary">Delete</button></a></li>
+                </ul>
+            </div>
+        
+        
+        {{/each}}
+    </div>
+</div>

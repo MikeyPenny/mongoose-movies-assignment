@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    padding: 0;
+    
+}
+
+.row {
+    justify-content: center;
+}
+
+.navbar {
+    width: 80%;
+}
+
+.content {
+    margin-top: 10px;
+}
+
+.card {
+    margin-top: 40px;
+}
+
+.add-celebrity button {
+    margin-top: 10px;
+}
+
+.log-items {
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+}

@@ -1,0 +1,35 @@
+<div class="celeb-details container">
+    <form action="/update-celebrity" method="POST">
+            <input type="hidden" name="id" value="{{celebrity._id}}" >
+        <div class="form-group">
+            <label for="firstName">First name:</label>
+            <input id="firstName" type="text" class="form-control" name="name" value="{{ celebrity.name }}" aria-describedby="titleHelp" placeholder="Enter celebrity´s name">
+        </div>
+        <div class="form-group">
+            <label for="lastName">Occupation:</label>
+            <input id="lastName" type="text" class="form-control" name="occupation" value="{{ celebrity.occupation }}" aria-describedby="titleHelp" placeholder="Enter celebrity´s occupation">
+        </div>
+        <div class="form-group">
+            <label for="lastName">Catchphrase:</label>
+            <input id="lastName" type="text" class="form-control" name="catchPhrase" value="{{ celebrity.catchPhrase }}" aria-describedby="titleHelp" placeholder="Enter celebrity´s catchphrase">
+        </div>
+        <div class="form-gorup">
+            <label for="movie-list">Select movie:</label>
+            <select id="movie-list" class="form-control" name="allmovies" multiple="{{movies.length}}" >
+                {{#each movies }}
+                    <option value="{{_id}}">{{ title }}</option>
+                {{/each}}
+            </select>
+
+            <label for="movie-select">Select movie:</label>
+            <select id="movie-select" class="form-control" name="movies" multiple="{{featuredMovies.length}}" >
+                {{#each featuredMovies }}
+                    <option selected value="{{_id}}">{{ title }}</option>
+                {{/each}}
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary" >Update Celebrity</button>
+    </form>
+</div>
+
+<script src="/js/celebrity-details.js"></script>

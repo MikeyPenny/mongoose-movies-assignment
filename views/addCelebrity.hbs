@@ -1,0 +1,25 @@
+<div class="add-celebrity container">
+    <form action="celebrity" method="POST">
+        <div class="form-group">
+            <label for="firstName">Name:</label>
+            <input id="firstName" type="text" class="form-control" name="name" value="{{ celebrity.name }}" aria-describedby="titleHelp" placeholder="Enter celebrity´s first name">
+        </div>
+        <div class="form-group">
+            <label for="lastName">Occupation:</label>
+            <input id="lastName" type="text" class="form-control" name="occupation" value="{{ celebrity.occupation }}" aria-describedby="titleHelp" placeholder="Enter celebrity´s occupation">
+        </div>
+        <div class="form-group">
+            <label for="lastName">Catchphrase:</label>
+            <input id="lastName" type="text" class="form-control" name="catchPhrase" value="{{ celebrity.catchPhrase }}" aria-describedby="titleHelp" placeholder="Enter celebrity´s catchphrase">
+        </div>
+        <div class="form-gorup">
+            <label for="movie-select">Select movie:</label>
+            <select id="movie-select" class="form-control" name="movies" multiple="{{movies.length}}" >
+                {{#each movies}}
+                    <option value="{{_id}}">{{ title }}</option>
+                {{/each}}
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary" >Add Celebrity</button>
+    </form>
+</div>
